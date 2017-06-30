@@ -1,0 +1,51 @@
+﻿@model IEnumerable<PhoneBook.Models.SMSLog>
+
+@{
+    ViewBag.Title = "smsLogs";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="contact" content="width=device-width" />
+    <title>Contact List</title>
+</head>
+<body>
+    <div class="jumbotron">
+        <h1>SMS Logs</h1>
+        <p class="lead">Description...List of SMS sent</p>
+    </div>
+    <div class="table-responsive" style="font-size:medium;">
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Contact)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Timestamp)
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Contact)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Timestamp)
+                    </td>                    
+                </tr>
+            }
+            </table>
+        <button class="btn btn-info" type="button" onclick="location.href='@Url.Action("Index")'">Home</button>
+        </div>
+    </body>
+</html>

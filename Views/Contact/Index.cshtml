@@ -1,0 +1,24 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<div class="jumbotron">
+    <h1>SMS</h1>
+    <p class="lead">Description...This is the Home page with menu options.</p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Contacts</h2>
+        <p>
+            Click to view all the list of contacts with name and number.
+        </p>
+        <p><a class="btn btn-default" onclick="location.href='@Url.Action("contactList")'">Contact List &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Call History</h2>
+        <p>Check the call history.</p>
+        <p><a class="btn btn-default" onclick="location.href='@Url.Action("smsLogs")'">Log History &raquo;</a></p>
+    </div>
+
+</div>
